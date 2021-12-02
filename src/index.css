@@ -1,3 +1,23 @@
-body{
-  background-color: pink;
+body {
+  background-color: #282c35;
+  color: #fff;
+}
+.App {
+  display: flex;
+}
+
+aside {
+  padding: 20px;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+.nav-item.active {
+  color: red;
+}
+
+main {
+  padding: 20px;
+  flex: 1;
 }
