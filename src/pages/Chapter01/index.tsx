@@ -4,7 +4,7 @@ const Test1: React.FC = () => {
   const [value, setValue] = useState('');
   return (
     <div>
-      <h1>函数式组件 - {value}</h1>
+      <h2>函数式组件 - {value}</h2>
       <input
         type="text"
         onChange={(e): void => {
@@ -42,7 +42,7 @@ class Test2 extends React.Component<{}, { value: string }> {
   render() {
     return (
       <div>
-        <h1>类组件 - {this.state.value}</h1>
+        <h2>类组件 - {this.state.value}</h2>
         <input
           type="text"
           onChange={(e): void => {
@@ -62,6 +62,7 @@ class Test2 extends React.Component<{}, { value: string }> {
 const Chapter01: React.FC = () => {
   return (
     <div>
+      <h1>函数式组件和类组件的区别</h1>
       <Test1></Test1>
       <Test2></Test2>
     </div>

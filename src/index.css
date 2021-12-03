@@ -21,3 +21,17 @@ main {
   padding: 20px;
   flex: 1;
 }
+
+@keyframes ani {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

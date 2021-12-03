@@ -94,3 +94,13 @@ function resolveDispatcher() {
 ```
 
 所以`useState(xxx)`代码约等于`ReactCurrentDispatcher.current().useState(xxx)`
+
+我们再寻找`ReactCurrentDispatcher.current`
+
+## 3. 常见问题及优化
+
+1. 不要误认为函数组件只会执行一次，在组件内部定义很多和组件状态无关的值
+2. 使用`useMemo`避免过多的性能浪费
+3. 使用`useEffect`时要添加所有依赖
+4. 如果函数不在useEffect中使用，不建议频繁使用useCallback - useCallback 其实在函数组件中是作为函数进行调用，那么第一个参数就是我们传递的回调函数，无论是否使用 useCallback，这个回调函数都会被创建，所以起不到降低函数创建成本的作用。不仅无法降低创建成本，使用 useCallback后，第二个参数依赖项在每次 render 的时候还需要进行一次浅比较，无形中增加了数据对比的成本。需要使用useCallback的场景：需要对子组件进行性能优化
+5. 

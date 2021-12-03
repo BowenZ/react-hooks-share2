@@ -106,6 +106,7 @@ const Test2: React.FC = () => {
 const Chapter02: React.FC = () => {
   return (
     <div>
+      <h1>类组件对比函数组件的优势</h1>
       <Test1></Test1>
       <Test2></Test2>
     </div>
